@@ -1,0 +1,15 @@
+import crypto from "crypto";
+
+const calculateHash = (block) => {
+    const data = JSON.stringify(block.data);
+
+    const blockData = 
+        data +
+        block.prevHash +
+        block.timestamp.toISOString() +
+        block.pow.toString();
+
+    return crypto.createHash("sha256").update(blockData).digest("hex");
+}
+
+export { calculateHash };
