@@ -1,4 +1,4 @@
-import crypto from "crypto";
+const crypto = require('crypto');
 
 const calculateHash = (block) => {
     const data = JSON.stringify(block.data);
@@ -12,4 +12,4 @@ const calculateHash = (block) => {
     return crypto.createHash("sha256").update(blockData).digest("hex");
 }
 
-export { calculateHash };
+module.exports = calculateHash;

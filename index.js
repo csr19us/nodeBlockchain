@@ -1,6 +1,9 @@
-import { BlockChain } from "./src/BlockChain.js";
+const BlockChain = require('./src/BlockChain.js');
+const BlockChain_create = require('./src/BlockChain.js').create;
 
-const blockchain = BlockChain.create(4); // difficulty increases exponentially with each increase
+
+
+const blockchain = BlockChain_create(2); // difficulty increases exponentially with each increase
 blockchain.addBlock("Alice", "Bob", 5);
 blockchain.addBlock("John", "Doe", 100);
 

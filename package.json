@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
     "test": "jest"
   },
@@ -19,5 +19,9 @@
   "homepage": "https://github.com/csr19us/nodeBlockchain#readme",
   "devDependencies": {
     "jest": "^27.5.1"
+  },
+  "jest": {
+    "verbose": true,
+    "testEnvironment": "node"
   }
 }

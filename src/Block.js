@@ -1,4 +1,4 @@
-import { calculateHash } from "./calcHash.js";
+const calculateHash = require('./calcHash.js');
 
 class Block {
     constructor(data, prevHash) {
@@ -19,4 +19,4 @@ class Block {
     }
 }
 
-export { Block };
+module.exports = Block;

@@ -1,5 +1,5 @@
-import { Block } from "./Block.js";
-import { calculateHash } from "./calcHash.js";
+const Block = require('./Block.js')
+const calculateHash = require('./calcHash.js');
 
 class BlockChain {
     constructor(genesisBlock, arrChain, difficulty) {
@@ -39,4 +39,4 @@ class BlockChain {
     }
 }
 
-export { BlockChain };
+module.exports = BlockChain, BlockChain.create;
